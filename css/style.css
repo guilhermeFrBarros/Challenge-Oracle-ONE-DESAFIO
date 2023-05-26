@@ -1,0 +1,63 @@
+:root {
+  --background-color: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  display: flex;
+}
+
+
+
+div.logo {
+  width: 32px;
+  height: 49px;
+  position: relative;
+  left: 83px;
+  top: 39px;
+}
+
+div.logo img {
+  position: relative;
+  width: 31.09px;
+  height: 48px;
+}
+
+
+
+section.formulario {
+  width: 900px;
+  position: relative;
+   height: calc(100vh - (168px - 49px));
+  top: calc(168px - 49px);
+  left: calc(240px - 32px);
+}
+
+section.formulario textarea {
+  background-color: var(--background-color);
+  border: none;
+  resize: none;
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  line-height: 48px;
+  color: #0a3871;
+  width: 680px;
+}
+
+textarea::placeholder {
+  color: #0a3871; /* Definindo a cor para o placeholder */
+}
+section.formulario textarea:focus {
+  outline: none;
+}
+
+.info-buttons {
+  position: absolute;
+  bottom: 72px;
+}
