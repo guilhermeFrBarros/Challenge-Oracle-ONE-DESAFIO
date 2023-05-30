@@ -48,8 +48,8 @@ const criptografar = () => {
 };
 
 function descriptografar() {
-  //validando campo
 
+  //Validando Campo
   if (textarea.value == "") {
     textarea.placeholder = "Preencha este Campo!";
     divResultado.classList.add("display-none");
