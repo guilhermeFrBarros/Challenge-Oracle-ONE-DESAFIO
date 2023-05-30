@@ -47,9 +47,7 @@ const criptografar = () => {
   form.reset();
 };
 
-
 function descriptografar() {
-  
   //validando campo
 
   if (textarea.value == "") {
@@ -64,7 +62,6 @@ function descriptografar() {
 
   let fraseCriptografada = textarea.value;
   let fraseDescriptografada = "";
-
 
   // descriptografia
 
@@ -90,10 +87,25 @@ function descriptografar() {
   );
 
   // Apresentando o resulatado
-   spanResultado.textContent = fraseDescriptografada;
-   divImagem.classList.add("display-none")
-   divResultado.classList.remove("display-none");
-   buttonCopiar.classList.remove("display-none");
+  spanResultado.textContent = fraseDescriptografada;
+  divImagem.classList.add("display-none");
+  divResultado.classList.remove("display-none");
+  buttonCopiar.classList.remove("display-none");
 
   form.reset();
 }
+
+const copiarTexto = function () {
+  let textoCopiado = document.getElementById("texto-resposta-span");
+  let texto = textoCopiado.innerText;
+
+  navigator.clipboard
+    .writeText(texto)
+    .then(function () {
+      console.log("Texto copiado: " + texto);
+      alert("Texto copiado!");
+    })
+    .catch(function (error) {
+      console.error("Erro ao copiar o texto: ", error);
+    });
+};
